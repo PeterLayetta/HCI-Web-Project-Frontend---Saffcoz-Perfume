@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaffCoZ Perfume</title>
+    <link rel="stylesheet" href="css/contactus.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html" class="logo-img">
+                    <img src="assets/logo_only.png" alt="SaffCoZ Logo" class="logo-img">
+                </a>
+                <a href="home.html" class="logo-text">SaffCoZ</a>
+            </div>
+            <!-- Hamburger Menuu -->
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <!-- Navigation Links Buttons -->
+            <script src="js/contactus.js" defer></script>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="storelocation.html">Store Locations</a></li>
+                <li><a href="contactus.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Us -->
+    <main>
+        <section class="contact-us">
+        <div class="box">
+            <h1>Contact Us</h1>
+            <p>Love our products? Please fill out the form below for more updates</p>
+            <form id="contactForm">
+                <!-- Full Name (Input Text) -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your first and last name">
+        
+                <!-- Email Address (Input Email) -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address">
+        
+                <!-- Phone Number (Input Number) -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        
+                <!-- Gender (Radio Buttons) -->
+                <p>Gender:</p>
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+        
+                <!-- Subscription (Checkbox) -->
+                <label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    I want to receive the latest news, exclusive offers, and new product releases.
+                </label>
+        
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+        </section>
+    </main>
+
+    <!-- Fixed Bottom Bar -->
+    <div class="social-bar">
+        <div class="social-content">
+            <a href="home.html" class="social-logo">
+                <img src="assets/logo(horizontal).jpeg" alt="Logo Slogan" class="social-logo">
+            </a>
+            <div class="social-text-icons">
+                <p class="slogan">Found us on:</p>
+                <div class="social-buttons">
+                    <a href="https://www.youtube.com/shorts/CHTrhB7g7UI" target="_blank" class="social-btn">
+                        <img src="assets/Instagram_icon.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.youtube.com/shorts/CHTrhB7g7UI" target="_blank" class="social-btn">
+                        <img src="assets/x_icon.png" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.youtube.com/shorts/CHTrhB7g7UI" target="_blank" class="social-btn">
+                        <img src="assets/tiktok_icon.png" alt="TikTok" class="social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 SaffCoZ. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

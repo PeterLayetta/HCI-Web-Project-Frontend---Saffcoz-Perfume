@@ -1,0 +1,320 @@
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+/* Logo Image */
+.logo-img {
+    height: 55px; 
+}
+
+/* Logo Text */
+.logo-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: hsl(340, 100%, 83%); 
+    color: black;
+    border-radius: 4px;
+}
+
+/* Hamburger Icon (Initially hidden on large screens) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile (Screen width below 768px) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .social-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
+    .social-logo {
+        height: 80px;
+    }
+    .copyright {
+        text-align: center; 
+    }
+}
+
+.nav-links a.active {
+    color: hsl(340, 100%, 83%);
+    pointer-events: none; 
+    cursor: default; 
+}
+
+/* Bottom Bar */
+.social-bar {
+    background-color: black;
+    padding: 40px 0;
+    color: white;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.social-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo in the Social Bar */
+.social-logo {
+    height: 130px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    border-radius: 10px;
+}
+
+/* Slogan and Icons */
+.social-text-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.slogan {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', serif;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-btn {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-icon {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-btn:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Copyright Text */
+.copyright {
+    font-size: 14px;
+    color: #ccc;
+    text-align: right;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../assets/background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten; 
+    background-color: #9c9c9cab;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+/*COntact Us*/
+.contact-us {
+    max-width: 550px;
+    margin: 50px auto;
+    background: #ffffff00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 
+        0 6px 8px rgb(255, 255, 255),
+        0 -6px 8px rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+}
+
+.contact-us h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-us label {
+    font-size: 14px;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+.contact-us input[type="radio"],
+.contact-us input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.contact-us button {
+    background-color: hsl(340, 100%, 50%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.contact-us button:hover {
+    background-color: hsl(340, 100%, 60%);
+}
+
+/* Highlight incorrect fields */
+input:invalid,
+input[type="radio"]:invalid {
+    background-color: rgba(255, 200, 200, 0.7); 
+}
+
+label.radio-invalid {
+    background-color: rgba(255, 200, 200, 0.7);
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Remove highlight on focus */
+input:focus {
+    background-color: white;
+}
+
+.radio-invalid input:focus {
+    background-color: transparent;
+}
+
+/* Feedback message */
+#formMessage {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+/* Error info why */
+.tooltip {
+    position: absolute;
+    background-color: #ff7070; 
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

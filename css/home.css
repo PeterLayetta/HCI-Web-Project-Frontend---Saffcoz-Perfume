@@ -1,0 +1,365 @@
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+/* Logo Image */
+.logo-img {
+    height: 55px; 
+}
+
+/* Logo Text */
+.logo-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: hsl(340, 100%, 83%); 
+    color: black;
+    border-radius: 4px;
+}
+
+/* Hamburger Icon (Initially hidden on large screens) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile (Screen width below 768px) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .social-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
+    .social-logo {
+        height: 80px;
+    }
+    .copyright {
+        text-align: center; 
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+
+
+.nav-links a.active {
+    color: hsl(340, 100%, 83%);
+    pointer-events: none; 
+    cursor: default; 
+}
+
+/* Bottom Bar */
+.social-bar {
+    background-color: black;
+    padding: 40px 0;
+    color: white;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.social-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo in the Social Bar */
+.social-logo {
+    height: 130px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    border-radius: 10px;
+}
+
+/* Slogan and Icons */
+.social-text-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.slogan {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', serif;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-btn {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-icon {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-btn:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Copyright Text */
+.copyright {
+    font-size: 14px;
+    color: #ccc;
+    text-align: right;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../assets/background4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten; 
+    background-color: #ffffff59;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+/*Home*/
+.banner {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.banner-img {
+    width: 100%;
+    max-width: 1920px;
+    max-height: 800px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(2, 1, 43, 0.329);
+    object-fit: cover;
+}
+
+
+/* Section Headings */
+.section h2, .products-page h2 {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Cards Container */
+.products-page {
+    padding: 20px;
+    text-align: center;
+}
+.products-page h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Individual Card */
+.card {
+    width: 300px; 
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card .content {
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+    height:70%;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 15px;
+}
+
+.card strong {
+    font-weight: bold;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid hsl(340, 100%, 83%);
+}
+
+.signature-label {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Align to the left */
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, gold, orange); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    display: block;
+}
+
+
+/* Signature and Regular Card Borders */
+.signature {
+    border: 3px solid gold; 
+    position: relative;
+}
+
+.regular {
+    border: 2px solid rgb(202, 202, 202);
+}
+.regular.discounted {
+    position: relative;
+}
+
+.discount-label {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Align to the right */
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, red, darkred); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    display: block;
+}
